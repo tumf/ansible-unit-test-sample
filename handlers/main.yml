@@ -1,0 +1,7 @@
+---
+# handlers file for sample
+- name: reload systemd
+  shell: |
+    systemctl daemon-reload
+    service service restart
+  when: not ansible_unit_test

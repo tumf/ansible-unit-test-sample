@@ -1,0 +1,4 @@
+---
+# defaults file for sample
+ansible_unit_test: False
+prefix_dir: ""

@@ -1,0 +1,19 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  tags:
+    - case-1
+  vars:
+    ansible_unit_test: True
+    var: var of case-1
+  roles:
+    - role: ../..
+- hosts: 127.0.0.1
+  connection: local
+  tags:
+    - case-2
+  vars:
+    ansible_unit_test: True
+    var: var of case-2
+  roles:
+    - role: ../..

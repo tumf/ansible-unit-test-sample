@@ -1,0 +1,7 @@
+---
+# tasks file for sample
+- file: state="directory" path="{{ prefix_dir }}/etc/default"
+- template: src="default.j2" dest="{{ prefix_dir }}/etc/default/sample"
+  notify: reload systemd
+- service: name="sample" state=started enabled=yes
+  when: not ansible_unit_test
